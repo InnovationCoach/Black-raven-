@@ -1,0 +1,871 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Raven | Next-Gen Avian Conservation, Rescue & Sanctuary</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+
+  <!-- Mobile Topbar -->
+  <header class="mobile-topbar" style="display: none;">
+    <a href="#endanger-bird" class="mobile-brand">
+      <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789027017/file_00000000694881fa8b3840e3f39515f7.png" alt="Black Raven Logo" style="height: 34px; width: 34px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--accent-amber);" onerror="this.onerror=null;this.src='logo.png';">
+      <span>black raven</span>
+    </a>
+    <button class="menu-toggle-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+  </header>
+
+  <div class="app-wrapper">
+    <!-- Left Glass Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="#endanger-bird" class="brand-mini">
+          <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789027017/file_00000000694881fa8b3840e3f39515f7.png" alt="Black Raven Logo" class="brand-mini-logo" onerror="this.onerror=null;this.src='logo.png';">
+          <span>black raven</span>
+        </a>
+        <span class="brand-badge">Hub</span>
+      </div>
+
+      <nav>
+        <ul class="nav-menu">
+          <li>
+            <a href="#endanger-bird" class="nav-link active" data-view="endanger-bird">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>endanger bird</span>
+            </a>
+          </li>
+          <li>
+            <a href="#injured-bird" class="nav-link" data-view="injured-bird">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+              <span>injured bird</span>
+              <span class="nav-badge danger">Rescue</span>
+            </a>
+          </li>
+          <li>
+            <a href="#training" class="nav-link" data-view="training">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <span>training</span>
+            </a>
+          </li>
+          <li>
+            <a href="#shop" class="nav-link" data-view="shop">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>shop</span>
+            </a>
+          </li>
+          <li>
+            <a href="#parrot" class="nav-link" data-view="parrot">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                <line x1="16" y1="8" x2="2" y2="22"></line>
+                <line x1="17.5" y1="15" x2="9" y2="15"></line>
+              </svg>
+              <span>parrot</span>
+            </a>
+          </li>
+          <li>
+            <a href="#bird-test" class="nav-link" data-view="bird-test">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span>parrot match</span>
+              <span class="nav-badge amber">Quiz</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-action-btn" id="open-cart-btn" aria-label="Open Sanctuary Cart">
+          <span style="display: flex; align-items: center; gap: 0.6rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            Cart
+          </span>
+          <span id="cart-item-count" style="background: var(--accent-amber); color: #000; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 99px; font-size: 0.75rem;">0</span>
+        </button>
+
+        <!-- Theme Toggle Switch -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark/light mode">
+          <svg id="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg id="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="theme-toggle-text">Light Mode</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Sticky Masthead -->
+      <header class="masthead">
+        <div class="brand-title-wrap">
+          <h1 class="brand-title">
+            <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789027017/file_00000000694881fa8b3840e3f39515f7.png" alt="Black Raven Logo" class="brand-logo-img" onerror="this.onerror=null;this.src='logo.png';">
+            <span class="brand-text"><span class="word-black">black</span> <span class="word-raven">raven</span></span>
+          </h1>
+          <div class="masthead-tagline">
+            <span class="live-indicator-dot"></span>
+            Avian Conservation Portal &bull; Wildlife Triage &bull; Sanctuary Network
+          </div>
+        </div>
+      </header>
+
+      <div class="view-container">
+
+        <!-- ==========================================================
+             PAGE 1: ENDANGER BIRD VIEW (Direct from PDF Page 1)
+             ========================================================== -->
+        <section id="view-endanger-bird" class="page-view active">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              endanger bird
+            </h2>
+            <p class="section-subtitle">Real-time conservation intelligence, global red-list monitoring, and urgent habitat reintroduction programs.</p>
+          </div>
+
+          <div class="endanger-grid">
+            <!-- Specimen 1: Gurney's Pitta (Exact wireframe content) -->
+            <article class="bird-specimen-card">
+              <div class="bird-card-header">
+                <div>
+                  <h3 class="bird-species-name">Gurney’s Pitta</h3>
+                  <p class="bird-sci-name">Hydrornis gurneyi</p>
+                </div>
+                <span class="status-tag extinct-wild">
+                  <span class="pulsing-dot"></span>
+                  Functionally Extinct (TH)
+                </span>
+              </div>
+
+              <div class="bird-image-gallery">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Gurney%27s_Pitta_%28male%29_-_Pitta_gurneyi_%283466943227%29.jpg" alt="Gurney's Pitta (Hydrornis gurneyi) male in tropical rainforest" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=85';">
+                <button class="audio-preview-overlay play-bird-call" data-bird="pitta" title="Listen to simulated rainforest bird call">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                  Listen Call
+                </button>
+              </div>
+
+              <p class="bird-description">
+                Gurney’s Pitta was, until 1986, considered probably extinct until a small population was found in a few remaining patches of lowland forest in the south of Thailand. However, since its rediscovery it has continued to decline in Thailand and it is considered functionally extinct at the one remaining site in Thailand – Khao Nor Chu Chi. It would seem that a few birds hang on here and there in the south of Thailand but with so little habitat and any remaining birds isolated from each other they have no future in Thailand without reforestation projects and reintroduction.
+              </p>
+
+              <div class="bird-stats-row">
+                <div class="stat-box">
+                  <div class="stat-val">&lt; 50</div>
+                  <div class="stat-lbl">Pop. in Thailand</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">Lowland</div>
+                  <div class="stat-lbl">Forest Biome</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val" style="color: var(--accent-rose);">Critical</div>
+                  <div class="stat-lbl">IUCN Status</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specimen 2: Spoon-billed Sandpiper (Exact wireframe content) -->
+            <article class="bird-specimen-card">
+              <div class="bird-card-header">
+                <div>
+                  <h3 class="bird-species-name">Spoon-billed Sandpiper</h3>
+                  <p class="bird-sci-name">Calidris pygmaea</p>
+                </div>
+                <span class="status-tag critical">
+                  <span class="pulsing-dot"></span>
+                  Critically Endangered
+                </span>
+              </div>
+
+              <div class="bird-image-gallery">
+                <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789020635/Spoon-billed-Sandpiper.jpg" alt="Spoon-billed Sandpiper along the mudflats" loading="lazy" onerror="this.onerror=null;this.src='spoon-billed-sandpiper.jpg';">
+                <button class="audio-preview-overlay play-bird-call" data-bird="sandpiper" title="Listen to simulated wader bird chirp">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                  Listen Call
+                </button>
+              </div>
+
+              <p class="bird-description">
+                Spoon-billed Sandpipers are in such rapid decline that the population estimate of 240-500 mature individuals is almost certainly very optimistic, some ornithologists suggest that there are fewer than 200 left. This species is unique amongst wader species in having a spatulate bill which it uses in a plucking and a sieving motion to find invertebrates in mudflats and salt pans.
+              </p>
+
+              <div class="bird-stats-row">
+                <div class="stat-box">
+                  <div class="stat-val">&lt; 200</div>
+                  <div class="stat-lbl">Est. Mature Birds</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">Spatulate</div>
+                  <div class="stat-lbl">Unique Bill Form</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val" style="color: var(--accent-rose);">Mudflats</div>
+                  <div class="stat-lbl">Crucial Habitat</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specimen 3: California Condor -->
+            <article class="bird-specimen-card">
+              <div class="bird-card-header">
+                <div>
+                  <h3 class="bird-species-name">California Condor</h3>
+                  <p class="bird-sci-name">Gymnogyps californianus</p>
+                </div>
+                <span class="status-tag critical">
+                  <span class="pulsing-dot"></span>
+                  Critically Endangered
+                </span>
+              </div>
+
+              <div class="bird-image-gallery">
+                <img src="https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=900&q=85" alt="California Condor" loading="lazy">
+              </div>
+
+              <p class="bird-description">
+                Once reduced to only 22 birds in 1987, the California Condor is one of the world's most endangered apex scavengers. Through intensive sanctuary breeding programs, populations now exceed 500 birds across North America, though lead bullet toxicity remains an urgent threat.
+              </p>
+
+              <div class="bird-stats-row">
+                <div class="stat-box">
+                  <div class="stat-val">~530</div>
+                  <div class="stat-lbl">Total Population</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">9.5 ft</div>
+                  <div class="stat-lbl">Wingspan</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">60+ Yrs</div>
+                  <div class="stat-lbl">Lifespan</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Specimen 4: Kakapo -->
+            <article class="bird-specimen-card">
+              <div class="bird-card-header">
+                <div>
+                  <h3 class="bird-species-name">Kākāpō</h3>
+                  <p class="bird-sci-name">Strigops habroptila</p>
+                </div>
+                <span class="status-tag critical">
+                  <span class="pulsing-dot"></span>
+                  Critically Endangered
+                </span>
+              </div>
+
+              <div class="bird-image-gallery">
+                <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=900&q=85" alt="Exotic flightless parrot" loading="lazy">
+              </div>
+
+              <p class="bird-description">
+                The Kākāpō is a nocturnal, flightless parrot endemic to New Zealand. Renowned as the heaviest parrot on Earth with a unique honey-musk scent, all remaining individuals are intensively safeguarded on predator-free offshore islands.
+              </p>
+
+              <div class="bird-stats-row">
+                <div class="stat-box">
+                  <div class="stat-val">~247</div>
+                  <div class="stat-lbl">Individuals</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">Flightless</div>
+                  <div class="stat-lbl">Locomotion</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-val">Sanctuary</div>
+                  <div class="stat-lbl">Island Range</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==========================================================
+             PAGE 2: INJURED BIRD VIEW (Direct from PDF Page 2)
+             ========================================================== -->
+        <section id="view-injured-bird" class="page-view">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-rose)" stroke-width="2.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              injured bird rescue & triage
+            </h2>
+            <p class="section-subtitle">Visual photo diagnosis and instant symptom emergency protocols to stabilize wild birds safely.</p>
+          </div>
+
+          <div class="rescue-hero">
+            <!-- "picture pls" Section (Mockup Page 2) -->
+            <div class="picture-pls-section">
+              <div class="picture-pls-header">
+                <h3 class="picture-pls-title">
+                  picture pls
+                  <span style="font-size: 1rem; font-weight: 700; color: var(--accent-amber); background: var(--accent-amber-glow); padding: 0.25rem 0.75rem; border-radius: 99px; border: 1px solid var(--border-accent);">AI Diagnostic Preview</span>
+                </h3>
+                <p class="picture-pls-desc">
+                  Take or drop an image of the bird here. Our automated scanner analyzes plumage condition, nestling vs. fledgling age characteristics, and overt trauma symptoms.
+                </p>
+                <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
+                  <button class="btn-primary" id="trigger-file-upload">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="17 8 12 3 7 8"></polyline>
+                      <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                    Upload Bird Photo
+                  </button>
+                  <button class="triage-chip" id="load-sample-photo-btn">
+                    Demo Sparrow Sample Photo
+                  </button>
+                </div>
+              </div>
+
+              <!-- Upload Dropzone with Laser Scanner Effect -->
+              <div class="upload-dropzone" id="bird-dropzone" tabindex="0" role="button" aria-label="Upload photo of injured bird">
+                <div class="scanner-beam" id="scanner-beam"></div>
+                <input type="file" id="bird-photo-input" accept="image/*" style="display: none;">
+                
+                <img src="" alt="Uploaded bird preview" class="dropzone-preview" id="dropzone-preview-img">
+                
+                <div class="dropzone-placeholder" id="dropzone-default-view">
+                  <!-- Wireframe Sparrow on Twig illustration -->
+                  <svg class="branch-bird-illu" viewBox="0 0 140 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="75" x2="130" y2="50" stroke="#795548" stroke-width="7" stroke-linecap="round"/>
+                    <line x1="90" y1="58" x2="110" y2="70" stroke="#5d4037" stroke-width="4" stroke-linecap="round"/>
+                    <ellipse cx="85" cy="40" rx="26" ry="20" fill="#b08968" transform="rotate(-15 85 40)"/>
+                    <ellipse cx="80" cy="44" rx="18" ry="14" fill="#e6ccb2" transform="rotate(-15 80 44)"/>
+                    <circle cx="98" cy="26" r="14" fill="#7f5539"/>
+                    <polygon points="112,24 122,27 112,31" fill="#f59e0b"/>
+                    <circle cx="104" cy="24" r="2.5" fill="#14171a"/>
+                    <path d="M62,38 C75,34 92,38 78,55 C65,58 55,50 62,38 Z" fill="#583101"/>
+                    <polygon points="58,45 32,58 40,64 64,50" fill="#43281c"/>
+                    <line x1="84" y1="58" x2="80" y2="64" stroke="#d4a373" stroke-width="2.5"/>
+                    <line x1="94" y1="55" x2="90" y2="61" stroke="#d4a373" stroke-width="2.5"/>
+                  </svg>
+                  <span class="dropzone-label">Drop bird image or click to upload</span>
+                  <span class="dropzone-sub">Accepts JPG, PNG, WEBP &bull; Instant Analysis</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- "what should you do..." Ultra-Modern Search Bar (Mockup Page 2) -->
+            <div class="search-triage-container">
+              <div class="triage-search-bar">
+                <span class="search-icon-big" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </span>
+                <div class="search-divider"></div>
+                <input 
+                  type="text" 
+                  id="triage-search-input" 
+                  class="search-input-field" 
+                  placeholder="what should you do..." 
+                  autocomplete="off"
+                  aria-label="Search what to do for an injured bird">
+              </div>
+
+              <!-- Quick Triage Filter Chips -->
+              <div class="quick-scenario-chips">
+                <span class="chip-label">Quick Scenarios:</span>
+                <button class="triage-chip" data-query="window">🪟 Window Shock</button>
+                <button class="triage-chip" data-query="baby">🐣 Fallen Baby Bird</button>
+                <button class="triage-chip" data-query="cat">🐾 Cat/Dog Attack</button>
+                <button class="triage-chip" data-query="bleeding">🩸 Bleeding/Fracture</button>
+                <button class="triage-chip" data-query="cold">❄️ Hypothermia</button>
+                <button class="triage-chip" data-query="all">View All Protocols</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Triage Guidance Cards -->
+          <div class="triage-cards-grid" id="triage-results-grid">
+            <div class="triage-card urgent" data-scenario="window shock concussion collision glass">
+              <div class="triage-card-header">
+                <h4 class="triage-title">Bird Hit a Window (Concussion/Shock)</h4>
+                <span class="triage-urgency-badge urgency-high">Critical Shock Care</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">Impact with glass causes acute intracranial pressure, swelling, and shock.</p>
+              <ul class="triage-steps">
+                <li><strong>Gentle Containment:</strong> Pick up with a soft towel; place in a ventilated dark shoebox.</li>
+                <li><strong>Controlled Heat:</strong> Rest half the container over a heating pad set to LOW.</li>
+                <li><strong>NEVER force fluids:</strong> A concussed bird will aspirate water into its lungs immediately.</li>
+                <li><strong>Reassess in 2 hours:</strong> If responsive, release in a sheltered outdoor shrub away from windows.</li>
+              </ul>
+              <div class="triage-warning-box">
+                Offering food or drops of water to stunned birds is the leading cause of fatal inhalation pneumonia.
+              </div>
+            </div>
+
+            <div class="triage-card caution" data-scenario="baby nestling fledgling ground tree nest fallen">
+              <div class="triage-card-header">
+                <h4 class="triage-title">Found a Baby Bird on the Ground</h4>
+                <span class="triage-urgency-badge urgency-med">Feathering Check</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">Distinguish between an unfeathered nestling and a flight-learning fledgling.</p>
+              <ul class="triage-steps">
+                <li><strong>Nestling (Pink or sparse fluff):</strong> Cannot hop or perch. Return to nest or create a makeshift hanging basket nearby.</li>
+                <li><strong>Fledgling (Fully feathered, short tail):</strong> Hops and flutters. Parents are foraging nearby. Keep pets away and observe.</li>
+                <li><strong>Human Scent is Safe:</strong> Birds have virtually no sense of smell; parents will happily care for a returned baby.</li>
+              </ul>
+            </div>
+
+            <div class="triage-card urgent" data-scenario="cat dog attack bite scratch predator infection">
+              <div class="triage-card-header">
+                <h4 class="triage-title">Caught by a Cat or Dog</h4>
+                <span class="triage-urgency-badge urgency-high">Pasteurella Lethal Risk</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">Feline saliva transmits *Pasteurella multocida* bacteria which causes septicemia within 24–48 hours.</p>
+              <ul class="triage-steps">
+                <li><strong>Emergency Antibiotics Required:</strong> Even without visible punctures, microscopic scratches prove lethal without veterinary care.</li>
+                <li><strong>Safe Transport:</strong> Secure in a warm, padded, dark container and take to a wildlife rehab center immediately.</li>
+              </ul>
+            </div>
+
+            <div class="triage-card urgent" data-scenario="bleeding blood fracture broken wing leg trauma bone">
+              <div class="triage-card-header">
+                <h4 class="triage-title">Active Bleeding or Fractured Wing</h4>
+                <span class="triage-urgency-badge urgency-high">Avian Vet Emergency</span>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">Birds hold minimal blood volume; severe bleeding requires direct pressure with sterile gauze.</p>
+              <ul class="triage-steps">
+                <li><strong>Direct Pressure:</strong> Apply gentle sterile gauze or styptic powder/cornstarch to stop localized bleeding.</li>
+                <li><strong>Do Not Splint at Home:</strong> Avoid amateur splints; wrap the bird loosely in a tea towel to prevent wing flapping until veterinary arrival.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================
+             PAGE 3: TRAINING VIEW
+             ========================================================== -->
+        <section id="view-training" class="page-view">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              avian positive reinforcement training
+            </h2>
+            <p class="section-subtitle">Science-backed, fear-free training protocols to build voluntary cooperation and mental engagement.</p>
+          </div>
+
+          <div class="training-guide-grid">
+            <article class="training-card">
+              <img src="https://images.unsplash.com/photo-1544943910-4c1dc44a0558?auto=format&fit=crop&w=800&q=80" alt="Parrot on hand" class="training-card-img" loading="lazy">
+              <div class="training-card-body">
+                <span class="training-level">Level 1 &bull; Core</span>
+                <h3 class="training-card-title">Voluntary Step-Up Protocol</h3>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">Empower your companion bird to step onto your arm willingly through positive reinforcers.</p>
+                <ul class="training-steps-list">
+                  <li>Identify highest-value treats (sunflower seed, pine nut, or almond slice).</li>
+                  <li>Position forearm steady at bird's chest level without crowding.</li>
+                  <li>Lure forward; click/mark the second both feet step on the perch.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="training-card">
+              <img src="https://images.unsplash.com/photo-1506220926622-ea001d4a0497?auto=format&fit=crop&w=800&q=80" alt="Cockatoo interacting" class="training-card-img" loading="lazy">
+              <div class="training-card-body">
+                <span class="training-level">Level 2 &bull; Precision</span>
+                <h3 class="training-card-title">Target Stick Conditioning</h3>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">Guide birds into transit carriers, playstands, and scales safely without grab handling.</p>
+                <ul class="training-steps-list">
+                  <li>Present a wooden target ball gently near the beak.</li>
+                  <li>Reward instant gentle contact with a clicker and treat delivery.</li>
+                  <li>Gradually navigate the bird across different perches and environments.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="training-card">
+              <img src="https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&w=800&q=80" alt="Bird flying" class="training-card-img" loading="lazy">
+              <div class="training-card-body">
+                <span class="training-level">Level 3 &bull; Flight</span>
+                <h3 class="training-card-title">Indoor Recall & Safety Cue</h3>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">Train flighted birds to return reliably on acoustic cues for exercise and safety.</p>
+                <ul class="training-steps-list">
+                  <li>Initiate short hops from perch to hand across 12 inches.</li>
+                  <li>Pair with a distinct 2-tone whistle or verbal cue.</li>
+                  <li>Expand distance across open living spaces with jackpot rewards.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==========================================================
+             PAGE 4: SHOP VIEW
+             ========================================================== -->
+        <section id="view-shop" class="page-view">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              sanctuary care supplies & merchandise
+            </h2>
+            <p class="section-subtitle">100% of proceeds fund wild avian hospital triage, reforestation corridors, and conservation research.</p>
+          </div>
+
+          <div class="shop-catalog-grid" id="shop-items-container">
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <span class="product-tag">Hospital Grade</span>
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80" alt="Avian Rescue Kit" class="product-img" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Avian Trauma & First Aid Kit</h3>
+                <p class="product-desc">Sterile saline wash, styptic powder, self-adhering wrap, electrolyte powder, and emergency handling towel.</p>
+                <div class="product-bottom">
+                  <span class="product-price">$38.00</span>
+                  <button class="btn-add-cart" data-id="p1" data-name="Avian Trauma & First Aid Kit" data-price="38.00" data-img="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=700&q=80">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <span class="product-tag">Eco-Harvested</span>
+                <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=700&q=80" alt="Natural Perch" class="product-img" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Natural Dragonwood Perch</h3>
+                <p class="product-desc">Ergonomic variable bark contours maintain foot muscle elasticity and prevent bumblefoot pododermatitis.</p>
+                <div class="product-bottom">
+                  <span class="product-price">$22.50</span>
+                  <button class="btn-add-cart" data-id="p2" data-name="Natural Dragonwood Perch" data-price="22.50" data-img="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=700&q=80">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <span class="product-tag">Mental Stimulation</span>
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=700&q=80" alt="Foraging toy" class="product-img" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Acrobatic Foraging Wheel</h3>
+                <p class="product-desc">Modular food puzzle designed for conures, greys, and macaws to simulate natural canopy foraging problems.</p>
+                <div class="product-bottom">
+                  <span class="product-price">$26.00</span>
+                  <button class="btn-add-cart" data-id="p3" data-name="Acrobatic Foraging Wheel" data-price="26.00" data-img="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=700&q=80">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-img-wrap">
+                <span class="product-tag">Sanctuary Apparel</span>
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=700&q=80" alt="Black Raven Merch" class="product-img" loading="lazy">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Black Raven Heavyweight Tee</h3>
+                <p class="product-desc">100% organic fair-trade ringspun cotton featuring custom gothic raven wings screenprint.</p>
+                <div class="product-bottom">
+                  <span class="product-price">$32.00</span>
+                  <button class="btn-add-cart" data-id="p4" data-name="Black Raven Heavyweight Tee" data-price="32.00" data-img="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=700&q=80">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================
+             PAGE 5: PARROT VIEW
+             ========================================================== -->
+        <section id="view-parrot" class="page-view">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2.5">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                <line x1="16" y1="8" x2="2" y2="22"></line>
+              </svg>
+              parrot species & comprehensive care
+            </h2>
+            <p class="section-subtitle">Cognitive capabilities, dietary requirements, vocal habits, and lifetime stewardship guidelines.</p>
+          </div>
+
+          <div class="parrot-grid">
+            <article class="parrot-card">
+              <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=700&q=80" alt="African Grey" class="parrot-card-img" loading="lazy">
+              <div class="parrot-card-body">
+                <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800;">Congo African Grey</h3>
+                <p style="color: var(--accent-amber); font-size: 0.95rem; margin-top: 0.25rem;">*Psittacus erithacus*</p>
+                <div class="parrot-traits">
+                  <span class="trait-pill">Lifespan: 50–60 Yrs</span>
+                  <span class="trait-pill">Cognition: 5-Yr Child</span>
+                  <span class="trait-pill">Noise: Moderate</span>
+                </div>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">
+                  Exceptional cognitive capacity and complex vocal learning require extensive interactive foraging and daily puzzle challenges to prevent neurotic feather-plucking.
+                </p>
+              </div>
+            </article>
+
+            <article class="parrot-card">
+              <img src="https://images.unsplash.com/photo-1544943910-4c1dc44a0558?auto=format&fit=crop&w=700&q=80" alt="Scarlet Macaw" class="parrot-card-img" loading="lazy">
+              <div class="parrot-card-body">
+                <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800;">Scarlet Macaw</h3>
+                <p style="color: var(--accent-amber); font-size: 0.95rem; margin-top: 0.25rem;">*Ara macao*</p>
+                <div class="parrot-traits">
+                  <span class="trait-pill">Lifespan: 60–75 Yrs</span>
+                  <span class="trait-pill">Bite Force: 500+ PSI</span>
+                  <span class="trait-pill">Noise: 105+ dB</span>
+                </div>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">
+                  Neotropical giants demanding expansive outdoor aviary flight environments, fresh destructible hardwood logs, and multi-generational family commitments.
+                </p>
+              </div>
+            </article>
+
+            <article class="parrot-card">
+              <img src="https://images.unsplash.com/photo-1596707328905-24c538421d01?auto=format&fit=crop&w=700&q=80" alt="Sun Conure" class="parrot-card-img" loading="lazy">
+              <div class="parrot-card-body">
+                <h3 style="font-family: var(--font-heading); font-size: 1.45rem; font-weight: 800;">Sun Conure</h3>
+                <p style="color: var(--accent-amber); font-size: 0.95rem; margin-top: 0.25rem;">*Aratinga solstitialis*</p>
+                <div class="parrot-traits">
+                  <span class="trait-pill">Lifespan: 25–30 Yrs</span>
+                  <span class="trait-pill">Social: Highly Bonded</span>
+                  <span class="trait-pill">Noise: High Pitch</span>
+                </div>
+                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted);">
+                  Playful and deeply affectionate companions that thrive on active physical snuggling, social flock inclusion, and consistent positive reinforcement.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==========================================================
+             PAGE 6: WHAT PARROT SUITS YOU? — Personality Quiz
+             ========================================================== -->
+        <section id="view-bird-test" class="page-view">
+          <div class="section-hero">
+            <h2 class="section-label">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              what parrot suits you?
+            </h2>
+            <p class="section-subtitle">Answer 7 questions about your lifestyle &amp; personality — we'll find your perfect feathered match! 🦜</p>
+          </div>
+
+          <div class="quiz-container">
+            <div class="quiz-progress-bar-wrap">
+              <div class="quiz-progress-bar" id="quiz-progress" style="width: 0%;"></div>
+            </div>
+
+            <!-- Question Screen -->
+            <div id="quiz-screen-question">
+              <div class="quiz-q-num" id="quiz-counter">Question 1 of 7</div>
+              <h3 class="quiz-question-text" id="quiz-question">Loading...</h3>
+              <div class="quiz-options-list" id="quiz-options-container"></div>
+              <div style="display: flex; justify-content: flex-end; margin-top: 1.5rem;">
+                <button class="btn-primary" id="quiz-next-btn" style="display: none;">Next &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Result Screen -->
+            <div id="quiz-screen-result" style="display: none; text-align: center; padding: 1.5rem 0;">
+              <p style="color: var(--accent-amber); font-family: var(--font-heading); font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.5rem;">Your Perfect Match</p>
+              <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 900; margin-bottom: 1.5rem;" id="quiz-result-title">African Grey Parrot</h3>
+
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem; max-width: 560px; margin: 0 auto;">
+                <div id="quiz-result-img-wrap" style="width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 4px solid var(--accent-amber); box-shadow: 0 0 32px var(--accent-amber-glow);">
+                  <img id="quiz-result-img" src="" alt="Your parrot match" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div style="background: var(--bg-muted); border: 1px solid var(--border-subtle); padding: 1.75rem; border-radius: var(--radius-lg); width: 100%; text-align: left;">
+                  <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                    <span id="quiz-result-emoji" style="font-size: 2rem;">🦜</span>
+                    <div>
+                      <p style="font-family: var(--font-heading); font-weight: 800; font-size: 1.2rem; color: var(--accent-amber);" id="quiz-result-subtitle">The Intellectual</p>
+                      <p style="font-size: 0.8rem; color: var(--text-muted);" id="quiz-result-origin">Origin: West &amp; Central Africa</p>
+                    </div>
+                  </div>
+                  <p style="font-size: 0.97rem; line-height: 1.7; color: var(--text-secondary);" id="quiz-result-desc">You are a deep thinker who values meaningful connection.</p>
+                  <hr style="border-color: var(--border-subtle); margin: 1rem 0;">
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; font-size: 0.88rem;">
+                    <div><span style="color: var(--accent-amber);">🎓</span> <strong>Intelligence:</strong> <span id="quiz-stat-iq" style="color: var(--text-muted);">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                    <div><span style="color: var(--accent-amber);">🔊</span> <strong>Talkativeness:</strong> <span id="quiz-stat-talk" style="color: var(--text-muted);">&#9733;&#9733;&#9733;&#9733;&#9734;</span></div>
+                    <div><span style="color: var(--accent-amber);">🏠</span> <strong>Space needed:</strong> <span id="quiz-stat-space" style="color: var(--text-muted);">Medium</span></div>
+                    <div><span style="color: var(--accent-amber);">💛</span> <strong>Affection:</strong> <span id="quiz-stat-love" style="color: var(--text-muted);">&#9733;&#9733;&#9733;&#9733;&#9734;</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <button class="btn-primary" id="quiz-restart-btn" style="margin-top: 2rem;">Try Again 🔄</button>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ==========================================================
+       BABY CHICKEN CLICK-TO-CHAT BOT (Direct from User Request)
+       ========================================================== -->
+  <div class="chick-chatbot-widget">
+    <!-- Floating Baby Chick Button matching PDF Page 1 bottom-right sticker -->
+    <button class="chick-trigger-btn" id="chick-chatbot-btn" aria-label="Open Baby Chicken Chat Bot" title="Click to chat with Pip the Baby Chick!">
+      <span class="chick-speech-bubble">Chirp! Click to chat 🐥</span>
+      <!-- Cute Baby Chick SVG Mascot -->
+      <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="54" r="38" fill="#ffde59"/>
+        <ellipse cx="50" cy="58" rx="28" ry="24" fill="#ffea79"/>
+        <path d="M48,16 C48,10 52,10 52,16 C53,8 57,9 56,16" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="28" cy="58" r="8" fill="#ff8a80" opacity="0.6"/>
+        <circle cx="72" cy="58" r="8" fill="#ff8a80" opacity="0.6"/>
+        <circle cx="36" cy="46" r="5.5" fill="#1e293b"/>
+        <circle cx="64" cy="46" r="5.5" fill="#1e293b"/>
+        <circle cx="34.5" cy="44.5" r="2" fill="#ffffff"/>
+        <circle cx="62.5" cy="44.5" r="2" fill="#ffffff"/>
+        <polygon points="50,49 58,57 42,57" fill="#f97316"/>
+        <ellipse cx="14" cy="58" rx="5.5" ry="13" fill="#f59e0b" transform="rotate(22 14 58)"/>
+        <ellipse cx="86" cy="58" rx="5.5" ry="13" fill="#f59e0b" transform="rotate(-22 86 58)"/>
+        <line x1="42" y1="91" x2="42" y2="97" stroke="#ea580c" stroke-width="3.5" stroke-linecap="round"/>
+        <line x1="58" y1="91" x2="58" y2="97" stroke="#ea580c" stroke-width="3.5" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <!-- Modern Glass Chat Window Panel -->
+    <div class="chatbot-panel" id="chick-chatbot-panel" role="dialog" aria-modal="true" aria-label="Pip the Baby Chick Chat">
+      <div class="chatbot-panel-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar-mini">
+            <span style="font-size: 1.6rem;">🐥</span>
+          </div>
+          <div>
+            <div class="chatbot-title">Pip &bull; Baby Chick AI</div>
+            <div class="chatbot-status">
+              <span class="live-indicator-dot" style="width:6px;height:6px;"></span>
+              Active &bull; Ready to chirp!
+            </div>
+          </div>
+        </div>
+        <button class="chatbot-close-btn" id="close-chatbot-btn" aria-label="Close chat window">&times;</button>
+      </div>
+
+      <div class="chatbot-panel-body" id="chatbot-messages">
+        <div class="chat-bubble bot">
+          <strong>Chirp chirp! 🐣</strong> Hi there! I'm Pip, your little feathered AI guide at <strong>Black Raven</strong>!
+          <br><br>
+          Need emergency triage advice for an injured bird, curious about <em>Gurney's Pitta</em>, or want to explore our care training and shop? Ask me anything!
+        </div>
+
+        <div class="chat-bot-suggestions" id="chatbot-quick-suggestions">
+          <button class="chat-suggest-btn" data-ask="I found an injured bird, what should I do?">🆘 Found an injured bird!</button>
+          <button class="chat-suggest-btn" data-ask="Tell me about Gurney's Pitta and why it's endangered">🦜 Tell me about Gurney's Pitta</button>
+          <button class="chat-suggest-btn" data-ask="How does the 'picture pls' bird identification work?">📷 How does 'picture pls' work?</button>
+          <button class="chat-suggest-btn" data-ask="What is the best training method for parrots?">🎓 How do I train my bird?</button>
+          <button class="chat-suggest-btn" data-ask="What items are in the sanctuary shop?">🛒 Tell me about the shop</button>
+        </div>
+      </div>
+
+      <form class="chatbot-panel-footer" id="chatbot-form">
+        <input 
+          type="text" 
+          id="chatbot-input" 
+          class="chatbot-input" 
+          placeholder="Ask Pip anything about birds..." 
+          autocomplete="off" 
+          required>
+        <button type="submit" class="chatbot-send-btn" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modern Shopping Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3 style="font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;">Your Sanctuary Cart</h3>
+      <button class="chatbot-close-btn" id="close-cart-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="cart-items-list" id="cart-items-list">
+      <p style="color: var(--text-muted); text-align: center; margin-top: 3rem;">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cart-subtotal-price" style="color: var(--accent-amber);">$0.00</span>
+      </div>
+      <button class="btn-primary" style="width: 100%; justify-content: center;" id="checkout-btn">Proceed to Sanctuary Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Notification Toast -->
+  <div class="toast-msg" id="toast">Added to cart!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
