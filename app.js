@@ -1,4 +1,4 @@
-﻿/**
+/**
  * BLACK RAVEN - Next-Gen Avian Platform
  * Glassmorphic UI, AI Diagnostic Scanner, Audio Synthesizer & Pip Baby Chick Chat Bot
  */
@@ -740,7 +740,10 @@ document.addEventListener('DOMContentLoaded', () => {
     cartOverlay.classList.remove('open');
   }
 
+  const mobileCartBtn = document.getElementById('mobile-cart-btn');
+
   if (openCartBtn) openCartBtn.addEventListener('click', openCart);
+  if (mobileCartBtn) mobileCartBtn.addEventListener('click', openCart);
   if (closeCartBtn) closeCartBtn.addEventListener('click', closeCart);
   if (cartOverlay) cartOverlay.addEventListener('click', closeCart);
 

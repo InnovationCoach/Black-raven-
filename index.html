@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
@@ -10,18 +10,27 @@
 <body>
 
   <!-- Mobile Topbar -->
-  <header class="mobile-topbar" style="display: none;">
+  <header class="mobile-topbar">
     <a href="#endanger-bird" class="mobile-brand">
-      <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789027017/file_00000000694881fa8b3840e3f39515f7.png" alt="Black Raven Logo" style="height: 34px; width: 34px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--accent-amber);" onerror="this.onerror=null;this.src='logo.png';">
-      <span>black raven</span>
+      <img src="https://res.cloudinary.com/szurjf97/image/upload/v1789027017/file_00000000694881fa8b3840e3f39515f7.png" alt="Black Raven Logo" class="mobile-brand-logo" onerror="this.onerror=null;this.src='logo.png';">
+      <span class="mobile-brand-name">black raven</span>
     </a>
-    <button class="menu-toggle-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+    <div style="display: flex; align-items: center; gap: 0.6rem;">
+      <button class="mobile-action-btn" id="mobile-cart-btn" aria-label="Open Sanctuary Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </button>
+      <button class="menu-toggle-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </header>
 
   <div class="app-wrapper">
@@ -152,12 +161,73 @@
              PAGE 1: ENDANGER BIRD VIEW (Direct from PDF Page 1)
              ========================================================== -->
         <section id="view-endanger-bird" class="page-view active">
-          <div class="section-hero">
+          <!-- High-Converting Hero Marketing & Rescue Banner -->
+          <div class="hero-marketing-card">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="pulsing-dot" style="background: var(--accent-rose);"></span>
+                Live Avian Rescue &amp; Conservation Network
+              </div>
+              <h1 class="hero-title">
+                Protect, Rescue &amp; Restore <span class="hero-title-highlight">Avian Wildlife</span>
+              </h1>
+              <p class="hero-subtitle">
+                Real-time IUCN Red List intelligence, 24/7 AI photo triage scanning, science-backed care protocols, and direct sanctuary habitat reintroduction.
+              </p>
+              
+              <div class="hero-cta-group">
+                <a href="#injured-bird" class="btn-hero-primary nav-link" data-view="injured-bird">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                  <span>🆘 Report Injured Bird</span>
+                </a>
+                <a href="#bird-test" class="btn-hero-secondary nav-link" data-view="bird-test">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                  </svg>
+                  <span>🦜 Find Parrot Match</span>
+                </a>
+                <a href="#shop" class="btn-hero-outline nav-link" data-view="shop">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  </svg>
+                  <span>🛒 Sanctuary Shop</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Live Impact Bar -->
+            <div class="hero-stats-bar">
+              <div class="hero-stat-item">
+                <span class="hero-stat-num">500+</span>
+                <span class="hero-stat-label">Sanctuary Rescues</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num" style="color: var(--accent-amber);">100%</span>
+                <span class="hero-stat-label">Proceeds Fund Care</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num" style="color: var(--accent-rose);">&lt; 200</span>
+                <span class="hero-stat-label">Sandpipers Left</span>
+              </div>
+              <div class="hero-stat-divider"></div>
+              <div class="hero-stat-item">
+                <span class="hero-stat-num" style="color: var(--accent-emerald);">24/7</span>
+                <span class="hero-stat-label">AI Triage Scanner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-hero" style="margin-top: 2.5rem;">
             <h2 class="section-label">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2.5">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
               </svg>
-              endanger bird
+              endanger bird species
             </h2>
             <p class="section-subtitle">Real-time conservation intelligence, global red-list monitoring, and urgent habitat reintroduction programs.</p>
           </div>
